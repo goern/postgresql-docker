@@ -1,0 +1,594 @@
+Warning: '-rm' is deprecated, it will be replaced by '--rm' soon. See usage.
+Sending build context to Docker daemon 63.49 kB
+Sending build context to Docker daemon 
+Step 0 : FROM fedora
+ ---> b7de3133ff98
+Step 1 : MAINTAINER scollier <scollier@redhat.com>
+ ---> Running in 090897a727c9
+ ---> 6beeb1af0710
+Removing intermediate container 090897a727c9
+Step 2 : RUN yum -y update; yum clean all
+ ---> Running in 775911a2e197
+Resolving Dependencies
+--> Running transaction check
+---> Package audit-libs.x86_64 0:2.3.5-1.fc20 will be updated
+---> Package audit-libs.x86_64 0:2.3.6-1.fc20 will be an update
+---> Package bash.x86_64 0:4.2.46-4.fc20 will be updated
+---> Package bash.x86_64 0:4.2.47-2.fc20 will be an update
+---> Package cpio.x86_64 0:2.11-24.fc20 will be updated
+---> Package cpio.x86_64 0:2.11-25.fc20 will be an update
+---> Package curl.x86_64 0:7.32.0-8.fc20 will be updated
+---> Package curl.x86_64 0:7.32.0-11.fc20 will be an update
+---> Package device-mapper.x86_64 0:1.02.82-5.fc20 will be updated
+---> Package device-mapper.x86_64 0:1.02.85-1.fc20 will be an update
+---> Package device-mapper-libs.x86_64 0:1.02.82-5.fc20 will be updated
+---> Package device-mapper-libs.x86_64 0:1.02.85-1.fc20 will be an update
+---> Package dracut.x86_64 0:037-10.git20140402.fc20 will be updated
+---> Package dracut.x86_64 0:037-11.git20140402.fc20 will be an update
+---> Package dracut-config-rescue.x86_64 0:037-10.git20140402.fc20 will be updated
+---> Package dracut-config-rescue.x86_64 0:037-11.git20140402.fc20 will be an update
+---> Package elfutils-libelf.x86_64 0:0.158-2.fc20 will be updated
+---> Package elfutils-libelf.x86_64 0:0.158-4.fc20 will be an update
+---> Package gawk.x86_64 0:4.1.0-2.fc20 will be updated
+---> Package gawk.x86_64 0:4.1.0-3.fc20 will be an update
+---> Package iproute.x86_64 0:3.12.0-2.fc20 will be updated
+---> Package iproute.x86_64 0:3.14.0-2.fc20 will be an update
+---> Package iputils.x86_64 0:20121221-5.fc20 will be updated
+---> Package iputils.x86_64 0:20140519-1.fc20 will be an update
+---> Package krb5-libs.x86_64 0:1.11.5-4.fc20 will be updated
+---> Package krb5-libs.x86_64 0:1.11.5-5.fc20 will be an update
+---> Package libblkid.x86_64 0:2.24.1-1.fc20 will be updated
+---> Package libblkid.x86_64 0:2.24.2-1.fc20 will be an update
+---> Package libcap-ng.x86_64 0:0.7.3-6.fc20 will be updated
+---> Package libcap-ng.x86_64 0:0.7.4-1.fc20 will be an update
+---> Package libcurl.x86_64 0:7.32.0-8.fc20 will be updated
+---> Package libcurl.x86_64 0:7.32.0-11.fc20 will be an update
+---> Package libmount.x86_64 0:2.24.1-1.fc20 will be updated
+---> Package libmount.x86_64 0:2.24.2-1.fc20 will be an update
+---> Package libssh2.x86_64 0:1.4.3-8.fc20 will be updated
+---> Package libssh2.x86_64 0:1.4.3-9.fc20 will be an update
+---> Package libtasn1.x86_64 0:3.3-2.fc20 will be updated
+---> Package libtasn1.x86_64 0:3.6-1.fc20 will be an update
+---> Package libuuid.x86_64 0:2.24.1-1.fc20 will be updated
+---> Package libuuid.x86_64 0:2.24.2-1.fc20 will be an update
+---> Package nspr.x86_64 0:4.10.4-1.fc20 will be updated
+---> Package nspr.x86_64 0:4.10.6-1.fc20 will be an update
+---> Package nss.x86_64 0:3.16.0-1.fc20 will be updated
+---> Package nss.x86_64 0:3.16.1-1.fc20 will be an update
+---> Package nss-softokn.x86_64 0:3.16.0-1.fc20 will be updated
+---> Package nss-softokn.x86_64 0:3.16.1-1.fc20 will be an update
+---> Package nss-softokn-freebl.x86_64 0:3.16.0-1.fc20 will be updated
+---> Package nss-softokn-freebl.x86_64 0:3.16.1-1.fc20 will be an update
+---> Package nss-sysinit.x86_64 0:3.16.0-1.fc20 will be updated
+---> Package nss-sysinit.x86_64 0:3.16.1-1.fc20 will be an update
+---> Package nss-tools.x86_64 0:3.16.0-1.fc20 will be updated
+---> Package nss-tools.x86_64 0:3.16.1-1.fc20 will be an update
+---> Package nss-util.x86_64 0:3.16.0-1.fc20 will be updated
+---> Package nss-util.x86_64 0:3.16.1-1.fc20 will be an update
+---> Package openldap.x86_64 0:2.4.39-2.fc20 will be updated
+---> Package openldap.x86_64 0:2.4.39-3.fc20 will be an update
+---> Package openssh.x86_64 0:6.4p1-3.fc20 will be updated
+---> Package openssh.x86_64 0:6.4p1-4.fc20 will be an update
+---> Package openssh-clients.x86_64 0:6.4p1-3.fc20 will be updated
+---> Package openssh-clients.x86_64 0:6.4p1-4.fc20 will be an update
+---> Package openssl-libs.x86_64 1:1.0.1e-37.fc20.1 will be updated
+---> Package openssl-libs.x86_64 1:1.0.1e-38.fc20 will be an update
+---> Package procps-ng.x86_64 0:3.3.8-16.fc20 will be updated
+---> Package procps-ng.x86_64 0:3.3.8-17.fc20 will be an update
+---> Package python.x86_64 0:2.7.5-11.fc20 will be updated
+---> Package python.x86_64 0:2.7.5-12.fc20 will be an update
+---> Package python-libs.x86_64 0:2.7.5-11.fc20 will be updated
+---> Package python-libs.x86_64 0:2.7.5-12.fc20 will be an update
+---> Package python-six.noarch 0:1.4.1-1.fc20 will be updated
+---> Package python-six.noarch 0:1.6.1-1.fc20 will be an update
+---> Package python-urlgrabber.noarch 0:3.9.1-32.fc20 will be updated
+---> Package python-urlgrabber.noarch 0:3.10.1-0.fc20 will be an update
+---> Package rsync.x86_64 0:3.1.0-2.fc20 will be updated
+---> Package rsync.x86_64 0:3.1.0-5.fc20 will be an update
+---> Package sqlite.x86_64 0:3.8.4.2-2.fc20 will be updated
+---> Package sqlite.x86_64 0:3.8.4.3-1.fc20 will be an update
+---> Package systemd.x86_64 0:208-15.fc20 will be updated
+---> Package systemd.x86_64 0:208-19.fc20 will be an update
+---> Package systemd-libs.x86_64 0:208-15.fc20 will be updated
+---> Package systemd-libs.x86_64 0:208-19.fc20 will be an update
+---> Package tzdata.noarch 0:2014b-1.fc20 will be updated
+---> Package tzdata.noarch 0:2014e-1.fc20 will be an update
+---> Package util-linux.x86_64 0:2.24.1-1.fc20 will be updated
+---> Package util-linux.x86_64 0:2.24.2-1.fc20 will be an update
+---> Package xz.x86_64 0:5.1.2-8alpha.fc20 will be updated
+---> Package xz.x86_64 0:5.1.2-12alpha.fc20 will be an update
+---> Package xz-libs.x86_64 0:5.1.2-8alpha.fc20 will be updated
+---> Package xz-libs.x86_64 0:5.1.2-12alpha.fc20 will be an update
+---> Package yum.noarch 0:3.4.3-137.fc20 will be updated
+---> Package yum.noarch 0:3.4.3-148.fc20 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                 Arch      Version                     Repository  Size
+================================================================================
+Updating:
+ audit-libs              x86_64    2.3.6-1.fc20                updates     77 k
+ bash                    x86_64    4.2.47-2.fc20               updates    997 k
+ cpio                    x86_64    2.11-25.fc20                updates    210 k
+ curl                    x86_64    7.32.0-11.fc20              updates    269 k
+ device-mapper           x86_64    1.02.85-1.fc20              updates    194 k
+ device-mapper-libs      x86_64    1.02.85-1.fc20              updates    228 k
+ dracut                  x86_64    037-11.git20140402.fc20     updates    301 k
+ dracut-config-rescue    x86_64    037-11.git20140402.fc20     updates     38 k
+ elfutils-libelf         x86_64    0.158-4.fc20                updates    187 k
+ gawk                    x86_64    4.1.0-3.fc20                updates    964 k
+ iproute                 x86_64    3.14.0-2.fc20               updates    515 k
+ iputils                 x86_64    20140519-1.fc20             updates    152 k
+ krb5-libs               x86_64    1.11.5-5.fc20               updates    812 k
+ libblkid                x86_64    2.24.2-1.fc20               updates    166 k
+ libcap-ng               x86_64    0.7.4-1.fc20                updates     24 k
+ libcurl                 x86_64    7.32.0-11.fc20              updates    220 k
+ libmount                x86_64    2.24.2-1.fc20               updates    171 k
+ libssh2                 x86_64    1.4.3-9.fc20                updates    133 k
+ libtasn1                x86_64    3.6-1.fc20                  updates    316 k
+ libuuid                 x86_64    2.24.2-1.fc20               updates     71 k
+ nspr                    x86_64    4.10.6-1.fc20               updates    122 k
+ nss                     x86_64    3.16.1-1.fc20               updates    877 k
+ nss-softokn             x86_64    3.16.1-1.fc20               updates    309 k
+ nss-softokn-freebl      x86_64    3.16.1-1.fc20               updates    198 k
+ nss-sysinit             x86_64    3.16.1-1.fc20               updates     47 k
+ nss-tools               x86_64    3.16.1-1.fc20               updates    473 k
+ nss-util                x86_64    3.16.1-1.fc20               updates     69 k
+ openldap                x86_64    2.4.39-3.fc20               updates    336 k
+ openssh                 x86_64    6.4p1-4.fc20                updates    340 k
+ openssh-clients         x86_64    6.4p1-4.fc20                updates    470 k
+ openssl-libs            x86_64    1:1.0.1e-38.fc20            updates    916 k
+ procps-ng               x86_64    3.3.8-17.fc20               updates    273 k
+ python                  x86_64    2.7.5-12.fc20               updates     85 k
+ python-libs             x86_64    2.7.5-12.fc20               updates    5.5 M
+ python-six              noarch    1.6.1-1.fc20                updates     25 k
+ python-urlgrabber       noarch    3.10.1-0.fc20               updates    107 k
+ rsync                   x86_64    3.1.0-5.fc20                updates    403 k
+ sqlite                  x86_64    3.8.4.3-1.fc20              updates    419 k
+ systemd                 x86_64    208-19.fc20                 updates    2.7 M
+ systemd-libs            x86_64    208-19.fc20                 updates    154 k
+ tzdata                  noarch    2014e-1.fc20                updates    430 k
+ util-linux              x86_64    2.24.2-1.fc20               updates    1.9 M
+ xz                      x86_64    5.1.2-12alpha.fc20          updates    103 k
+ xz-libs                 x86_64    5.1.2-12alpha.fc20          updates    102 k
+ yum                     noarch    3.4.3-148.fc20              updates    1.2 M
+
+Transaction Summary
+================================================================================
+Upgrade  45 Packages
+
+Total download size: 23 M
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+[91mwarning: /var/cache/yum/x86_64/20/updates/packages/audit-libs-2.3.6-1.fc20.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 246110c1: NOKEY
+[0mPublic key for audit-libs-2.3.6-1.fc20.x86_64.rpm is not installed
+--------------------------------------------------------------------------------
+Total                                              615 kB/s |  23 MB  00:38     
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-20-x86_64
+[91mImporting GPG key 0x246110C1:
+ Userid     : "Fedora (20) <fedora@fedoraproject.org>"
+ Fingerprint: c7c9 a9c8 9153 f201 83ce 7cba 2eb1 61fa 2461 10c1
+ Package    : fedora-release-20-3.noarch (@fedora-updates/$releasever)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-20-x86_64
+[0mRunning transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : bash-4.2.47-2.fc20.x86_64                                   1/90 
+  Updating   : nspr-4.10.6-1.fc20.x86_64                                   2/90 
+  Updating   : nss-util-3.16.1-1.fc20.x86_64                               3/90 
+  Updating   : xz-libs-5.1.2-12alpha.fc20.x86_64                           4/90 
+  Updating   : systemd-libs-208-19.fc20.x86_64                             5/90 
+  Updating   : libuuid-2.24.2-1.fc20.x86_64                                6/90 
+  Updating   : libblkid-2.24.2-1.fc20.x86_64                               7/90 
+  Updating   : audit-libs-2.3.6-1.fc20.x86_64                              8/90 
+  Updating   : systemd-208-19.fc20.x86_64                                  9/90 
+  Updating   : cpio-2.11-25.fc20.x86_64                                   10/90 
+  Updating   : nss-softokn-freebl-3.16.1-1.fc20.x86_64                    11/90 
+  Updating   : sqlite-3.8.4.3-1.fc20.x86_64                               12/90 
+  Updating   : nss-softokn-3.16.1-1.fc20.x86_64                           13/90 
+  Updating   : nss-sysinit-3.16.1-1.fc20.x86_64                           14/90 
+  Updating   : nss-3.16.1-1.fc20.x86_64                                   15/90 
+  Updating   : nss-tools-3.16.1-1.fc20.x86_64                             16/90 
+  Updating   : openldap-2.4.39-3.fc20.x86_64                              17/90 
+  Updating   : libmount-2.24.2-1.fc20.x86_64                              18/90 
+  Updating   : procps-ng-3.3.8-17.fc20.x86_64                             19/90 
+  Updating   : xz-5.1.2-12alpha.fc20.x86_64                               20/90 
+  Updating   : gawk-4.1.0-3.fc20.x86_64                                   21/90 
+  Updating   : krb5-libs-1.11.5-5.fc20.x86_64                             22/90 
+  Updating   : 1:openssl-libs-1.0.1e-38.fc20.x86_64                       23/90 
+  Updating   : libssh2-1.4.3-9.fc20.x86_64                                24/90 
+  Updating   : libcurl-7.32.0-11.fc20.x86_64                              25/90 
+  Updating   : python-libs-2.7.5-12.fc20.x86_64                           26/90 
+  Updating   : python-2.7.5-12.fc20.x86_64                                27/90 
+  Updating   : python-urlgrabber-3.10.1-0.fc20.noarch                     28/90 
+  Updating   : libcap-ng-0.7.4-1.fc20.x86_64                              29/90 
+  Updating   : util-linux-2.24.2-1.fc20.x86_64                            30/90 
+  Updating   : dracut-037-11.git20140402.fc20.x86_64                      31/90 
+  Updating   : device-mapper-libs-1.02.85-1.fc20.x86_64                   32/90 
+  Updating   : device-mapper-1.02.85-1.fc20.x86_64                        33/90 
+  Updating   : openssh-6.4p1-4.fc20.x86_64                                34/90 
+  Updating   : openssh-clients-6.4p1-4.fc20.x86_64                        35/90 
+  Updating   : dracut-config-rescue-037-11.git20140402.fc20.x86_64        36/90 
+  Updating   : yum-3.4.3-148.fc20.noarch                                  37/90 
+  Updating   : python-six-1.6.1-1.fc20.noarch                             38/90 
+  Updating   : curl-7.32.0-11.fc20.x86_64                                 39/90 
+  Updating   : iputils-20140519-1.fc20.x86_64                             40/90 
+  Updating   : rsync-3.1.0-5.fc20.x86_64                                  41/90 
+  Updating   : iproute-3.14.0-2.fc20.x86_64                               42/90 
+  Updating   : tzdata-2014e-1.fc20.noarch                                 43/90 
+  Updating   : libtasn1-3.6-1.fc20.x86_64                                 44/90 
+  Updating   : elfutils-libelf-0.158-4.fc20.x86_64                        45/90 
+  Cleanup    : curl-7.32.0-8.fc20.x86_64                                  46/90 
+  Cleanup    : libcurl-7.32.0-8.fc20.x86_64                               47/90 
+  Cleanup    : openssh-clients-6.4p1-3.fc20.x86_64                        48/90 
+  Cleanup    : yum-3.4.3-137.fc20.noarch                                  49/90 
+  Cleanup    : openssh-6.4p1-3.fc20.x86_64                                50/90 
+  Cleanup    : openldap-2.4.39-2.fc20.x86_64                              51/90 
+  Cleanup    : nss-tools-3.16.0-1.fc20.x86_64                             52/90 
+  Cleanup    : nss-sysinit-3.16.0-1.fc20.x86_64                           53/90 
+  Cleanup    : nss-3.16.0-1.fc20.x86_64                                   54/90 
+  Cleanup    : nss-softokn-3.16.0-1.fc20.x86_64                           55/90 
+  Cleanup    : device-mapper-libs-1.02.82-5.fc20.x86_64                   56/90 
+  Cleanup    : device-mapper-1.02.82-5.fc20.x86_64                        57/90 
+  Cleanup    : iputils-20121221-5.fc20.x86_64                             58/90 
+  Cleanup    : dracut-config-rescue-037-10.git20140402.fc20.x86_64        59/90 
+  Cleanup    : dracut-037-10.git20140402.fc20.x86_64                      60/90 
+  Cleanup    : util-linux-2.24.1-1.fc20.x86_64                            61/90 
+  Cleanup    : libmount-2.24.1-1.fc20.x86_64                              62/90 
+  Cleanup    : xz-5.1.2-8alpha.fc20.x86_64                                63/90 
+  Cleanup    : rsync-3.1.0-2.fc20.x86_64                                  64/90 
+  Cleanup    : python-urlgrabber-3.9.1-32.fc20.noarch                     65/90 
+  Cleanup    : python-six-1.4.1-1.fc20.noarch                             66/90 
+  Cleanup    : systemd-208-15.fc20.x86_64                                 67/90 
+  Cleanup    : libblkid-2.24.1-1.fc20.x86_64                              68/90 
+  Cleanup    : python-2.7.5-11.fc20.x86_64                                69/90 
+  Cleanup    : python-libs-2.7.5-11.fc20.x86_64                           70/90 
+  Cleanup    : cpio-2.11-24.fc20.x86_64                                   71/90 
+  Cleanup    : procps-ng-3.3.8-16.fc20.x86_64                             72/90 
+  Cleanup    : systemd-libs-208-15.fc20.x86_64                            73/90 
+  Cleanup    : nss-util-3.16.0-1.fc20.x86_64                              74/90 
+  Cleanup    : libssh2-1.4.3-8.fc20.x86_64                                75/90 
+  Cleanup    : 1:openssl-libs-1.0.1e-37.fc20.1.x86_64                     76/90 
+  Cleanup    : krb5-libs-1.11.5-4.fc20.x86_64                             77/90 
+  Cleanup    : gawk-4.1.0-2.fc20.x86_64                                   78/90 
+  Cleanup    : iproute-3.12.0-2.fc20.x86_64                               79/90 
+  Cleanup    : tzdata-2014b-1.fc20.noarch                                 80/90 
+  Cleanup    : bash-4.2.46-4.fc20.x86_64                                  81/90 
+  Cleanup    : nspr-4.10.4-1.fc20.x86_64                                  82/90 
+  Cleanup    : xz-libs-5.1.2-8alpha.fc20.x86_64                           83/90 
+  Cleanup    : sqlite-3.8.4.2-2.fc20.x86_64                               84/90 
+  Cleanup    : libuuid-2.24.1-1.fc20.x86_64                               85/90 
+  Cleanup    : audit-libs-2.3.5-1.fc20.x86_64                             86/90 
+  Cleanup    : libcap-ng-0.7.3-6.fc20.x86_64                              87/90 
+  Cleanup    : nss-softokn-freebl-3.16.0-1.fc20.x86_64                    88/90 
+  Cleanup    : libtasn1-3.3-2.fc20.x86_64                                 89/90 
+  Cleanup    : elfutils-libelf-0.158-2.fc20.x86_64                        90/90 
+  Verifying  : nss-softokn-3.16.1-1.fc20.x86_64                            1/90 
+  Verifying  : libblkid-2.24.2-1.fc20.x86_64                               2/90 
+  Verifying  : python-2.7.5-12.fc20.x86_64                                 3/90 
+  Verifying  : systemd-208-19.fc20.x86_64                                  4/90 
+  Verifying  : sqlite-3.8.4.3-1.fc20.x86_64                                5/90 
+  Verifying  : libmount-2.24.2-1.fc20.x86_64                               6/90 
+  Verifying  : dracut-037-11.git20140402.fc20.x86_64                       7/90 
+  Verifying  : elfutils-libelf-0.158-4.fc20.x86_64                         8/90 
+  Verifying  : iproute-3.14.0-2.fc20.x86_64                                9/90 
+  Verifying  : iputils-20140519-1.fc20.x86_64                             10/90 
+  Verifying  : nss-softokn-freebl-3.16.1-1.fc20.x86_64                    11/90 
+  Verifying  : device-mapper-1.02.85-1.fc20.x86_64                        12/90 
+  Verifying  : audit-libs-2.3.6-1.fc20.x86_64                             13/90 
+  Verifying  : bash-4.2.47-2.fc20.x86_64                                  14/90 
+  Verifying  : rsync-3.1.0-5.fc20.x86_64                                  15/90 
+  Verifying  : nss-tools-3.16.1-1.fc20.x86_64                             16/90 
+  Verifying  : libuuid-2.24.2-1.fc20.x86_64                               17/90 
+  Verifying  : openssh-clients-6.4p1-4.fc20.x86_64                        18/90 
+  Verifying  : xz-5.1.2-12alpha.fc20.x86_64                               19/90 
+  Verifying  : device-mapper-libs-1.02.85-1.fc20.x86_64                   20/90 
+  Verifying  : cpio-2.11-25.fc20.x86_64                                   21/90 
+  Verifying  : openssh-6.4p1-4.fc20.x86_64                                22/90 
+  Verifying  : libcurl-7.32.0-11.fc20.x86_64                              23/90 
+  Verifying  : nss-3.16.1-1.fc20.x86_64                                   24/90 
+  Verifying  : systemd-libs-208-19.fc20.x86_64                            25/90 
+  Verifying  : gawk-4.1.0-3.fc20.x86_64                                   26/90 
+  Verifying  : python-urlgrabber-3.10.1-0.fc20.noarch                     27/90 
+  Verifying  : util-linux-2.24.2-1.fc20.x86_64                            28/90 
+  Verifying  : dracut-config-rescue-037-11.git20140402.fc20.x86_64        29/90 
+  Verifying  : libtasn1-3.6-1.fc20.x86_64                                 30/90 
+  Verifying  : nss-util-3.16.1-1.fc20.x86_64                              31/90 
+  Verifying  : yum-3.4.3-148.fc20.noarch                                  32/90 
+  Verifying  : procps-ng-3.3.8-17.fc20.x86_64                             33/90 
+  Verifying  : libcap-ng-0.7.4-1.fc20.x86_64                              34/90 
+  Verifying  : libssh2-1.4.3-9.fc20.x86_64                                35/90 
+  Verifying  : nss-sysinit-3.16.1-1.fc20.x86_64                           36/90 
+  Verifying  : python-six-1.6.1-1.fc20.noarch                             37/90 
+  Verifying  : 1:openssl-libs-1.0.1e-38.fc20.x86_64                       38/90 
+  Verifying  : curl-7.32.0-11.fc20.x86_64                                 39/90 
+  Verifying  : krb5-libs-1.11.5-5.fc20.x86_64                             40/90 
+  Verifying  : nspr-4.10.6-1.fc20.x86_64                                  41/90 
+  Verifying  : python-libs-2.7.5-12.fc20.x86_64                           42/90 
+  Verifying  : xz-libs-5.1.2-12alpha.fc20.x86_64                          43/90 
+  Verifying  : tzdata-2014e-1.fc20.noarch                                 44/90 
+  Verifying  : openldap-2.4.39-3.fc20.x86_64                              45/90 
+  Verifying  : procps-ng-3.3.8-16.fc20.x86_64                             46/90 
+  Verifying  : nss-softokn-freebl-3.16.0-1.fc20.x86_64                    47/90 
+  Verifying  : tzdata-2014b-1.fc20.noarch                                 48/90 
+  Verifying  : nspr-4.10.4-1.fc20.x86_64                                  49/90 
+  Verifying  : iputils-20121221-5.fc20.x86_64                             50/90 
+  Verifying  : openssh-6.4p1-3.fc20.x86_64                                51/90 
+  Verifying  : iproute-3.12.0-2.fc20.x86_64                               52/90 
+  Verifying  : krb5-libs-1.11.5-4.fc20.x86_64                             53/90 
+  Verifying  : libblkid-2.24.1-1.fc20.x86_64                              54/90 
+  Verifying  : python-2.7.5-11.fc20.x86_64                                55/90 
+  Verifying  : libssh2-1.4.3-8.fc20.x86_64                                56/90 
+  Verifying  : xz-libs-5.1.2-8alpha.fc20.x86_64                           57/90 
+  Verifying  : libtasn1-3.3-2.fc20.x86_64                                 58/90 
+  Verifying  : dracut-config-rescue-037-10.git20140402.fc20.x86_64        59/90 
+  Verifying  : xz-5.1.2-8alpha.fc20.x86_64                                60/90 
+  Verifying  : systemd-208-15.fc20.x86_64                                 61/90 
+  Verifying  : libmount-2.24.1-1.fc20.x86_64                              62/90 
+  Verifying  : 1:openssl-libs-1.0.1e-37.fc20.1.x86_64                     63/90 
+  Verifying  : python-libs-2.7.5-11.fc20.x86_64                           64/90 
+  Verifying  : rsync-3.1.0-2.fc20.x86_64                                  65/90 
+  Verifying  : openldap-2.4.39-2.fc20.x86_64                              66/90 
+  Verifying  : nss-tools-3.16.0-1.fc20.x86_64                             67/90 
+  Verifying  : bash-4.2.46-4.fc20.x86_64                                  68/90 
+  Verifying  : audit-libs-2.3.5-1.fc20.x86_64                             69/90 
+  Verifying  : elfutils-libelf-0.158-2.fc20.x86_64                        70/90 
+  Verifying  : libuuid-2.24.1-1.fc20.x86_64                               71/90 
+  Verifying  : sqlite-3.8.4.2-2.fc20.x86_64                               72/90 
+  Verifying  : libcurl-7.32.0-8.fc20.x86_64                               73/90 
+  Verifying  : systemd-libs-208-15.fc20.x86_64                            74/90 
+  Verifying  : nss-3.16.0-1.fc20.x86_64                                   75/90 
+  Verifying  : libcap-ng-0.7.3-6.fc20.x86_64                              76/90 
+  Verifying  : yum-3.4.3-137.fc20.noarch                                  77/90 
+  Verifying  : openssh-clients-6.4p1-3.fc20.x86_64                        78/90 
+  Verifying  : python-urlgrabber-3.9.1-32.fc20.noarch                     79/90 
+  Verifying  : util-linux-2.24.1-1.fc20.x86_64                            80/90 
+  Verifying  : device-mapper-1.02.82-5.fc20.x86_64                        81/90 
+  Verifying  : device-mapper-libs-1.02.82-5.fc20.x86_64                   82/90 
+  Verifying  : nss-util-3.16.0-1.fc20.x86_64                              83/90 
+  Verifying  : gawk-4.1.0-2.fc20.x86_64                                   84/90 
+  Verifying  : dracut-037-10.git20140402.fc20.x86_64                      85/90 
+  Verifying  : curl-7.32.0-8.fc20.x86_64                                  86/90 
+  Verifying  : nss-softokn-3.16.0-1.fc20.x86_64                           87/90 
+  Verifying  : nss-sysinit-3.16.0-1.fc20.x86_64                           88/90 
+  Verifying  : cpio-2.11-24.fc20.x86_64                                   89/90 
+  Verifying  : python-six-1.4.1-1.fc20.noarch                             90/90 
+
+Updated:
+  audit-libs.x86_64 0:2.3.6-1.fc20                                              
+  bash.x86_64 0:4.2.47-2.fc20                                                   
+  cpio.x86_64 0:2.11-25.fc20                                                    
+  curl.x86_64 0:7.32.0-11.fc20                                                  
+  device-mapper.x86_64 0:1.02.85-1.fc20                                         
+  device-mapper-libs.x86_64 0:1.02.85-1.fc20                                    
+  dracut.x86_64 0:037-11.git20140402.fc20                                       
+  dracut-config-rescue.x86_64 0:037-11.git20140402.fc20                         
+  elfutils-libelf.x86_64 0:0.158-4.fc20                                         
+  gawk.x86_64 0:4.1.0-3.fc20                                                    
+  iproute.x86_64 0:3.14.0-2.fc20                                                
+  iputils.x86_64 0:20140519-1.fc20                                              
+  krb5-libs.x86_64 0:1.11.5-5.fc20                                              
+  libblkid.x86_64 0:2.24.2-1.fc20                                               
+  libcap-ng.x86_64 0:0.7.4-1.fc20                                               
+  libcurl.x86_64 0:7.32.0-11.fc20                                               
+  libmount.x86_64 0:2.24.2-1.fc20                                               
+  libssh2.x86_64 0:1.4.3-9.fc20                                                 
+  libtasn1.x86_64 0:3.6-1.fc20                                                  
+  libuuid.x86_64 0:2.24.2-1.fc20                                                
+  nspr.x86_64 0:4.10.6-1.fc20                                                   
+  nss.x86_64 0:3.16.1-1.fc20                                                    
+  nss-softokn.x86_64 0:3.16.1-1.fc20                                            
+  nss-softokn-freebl.x86_64 0:3.16.1-1.fc20                                     
+  nss-sysinit.x86_64 0:3.16.1-1.fc20                                            
+  nss-tools.x86_64 0:3.16.1-1.fc20                                              
+  nss-util.x86_64 0:3.16.1-1.fc20                                               
+  openldap.x86_64 0:2.4.39-3.fc20                                               
+  openssh.x86_64 0:6.4p1-4.fc20                                                 
+  openssh-clients.x86_64 0:6.4p1-4.fc20                                         
+  openssl-libs.x86_64 1:1.0.1e-38.fc20                                          
+  procps-ng.x86_64 0:3.3.8-17.fc20                                              
+  python.x86_64 0:2.7.5-12.fc20                                                 
+  python-libs.x86_64 0:2.7.5-12.fc20                                            
+  python-six.noarch 0:1.6.1-1.fc20                                              
+  python-urlgrabber.noarch 0:3.10.1-0.fc20                                      
+  rsync.x86_64 0:3.1.0-5.fc20                                                   
+  sqlite.x86_64 0:3.8.4.3-1.fc20                                                
+  systemd.x86_64 0:208-19.fc20                                                  
+  systemd-libs.x86_64 0:208-19.fc20                                             
+  tzdata.noarch 0:2014e-1.fc20                                                  
+  util-linux.x86_64 0:2.24.2-1.fc20                                             
+  xz.x86_64 0:5.1.2-12alpha.fc20                                                
+  xz-libs.x86_64 0:5.1.2-12alpha.fc20                                           
+  yum.noarch 0:3.4.3-148.fc20                                                   
+
+Complete!
+Cleaning repos: fedora updates
+Cleaning up everything
+ ---> 41ce58dd9c92
+Removing intermediate container 775911a2e197
+Step 3 : RUN yum -y install postgresql-server postgresql postgresql-contrib supervisor; yum clean all
+ ---> Running in c6cbdf73ba81
+Resolving Dependencies
+--> Running transaction check
+---> Package postgresql.x86_64 0:9.3.4-1.fc20 will be installed
+--> Processing Dependency: postgresql-libs(x86-64) = 9.3.4-1.fc20 for package: postgresql-9.3.4-1.fc20.x86_64
+--> Processing Dependency: libpq.so.5()(64bit) for package: postgresql-9.3.4-1.fc20.x86_64
+---> Package postgresql-contrib.x86_64 0:9.3.4-1.fc20 will be installed
+--> Processing Dependency: libxslt.so.1(LIBXML2_1.0.22)(64bit) for package: postgresql-contrib-9.3.4-1.fc20.x86_64
+--> Processing Dependency: libxslt.so.1(LIBXML2_1.0.18)(64bit) for package: postgresql-contrib-9.3.4-1.fc20.x86_64
+--> Processing Dependency: libxslt.so.1(LIBXML2_1.0.11)(64bit) for package: postgresql-contrib-9.3.4-1.fc20.x86_64
+--> Processing Dependency: libxslt.so.1()(64bit) for package: postgresql-contrib-9.3.4-1.fc20.x86_64
+--> Processing Dependency: libossp-uuid.so.16()(64bit) for package: postgresql-contrib-9.3.4-1.fc20.x86_64
+---> Package postgresql-server.x86_64 0:9.3.4-1.fc20 will be installed
+---> Package supervisor.noarch 0:3.0-1.fc20 will be installed
+--> Processing Dependency: python-meld3 >= 0.6.5 for package: supervisor-3.0-1.fc20.noarch
+--> Processing Dependency: python-setuptools for package: supervisor-3.0-1.fc20.noarch
+--> Running transaction check
+---> Package libxslt.x86_64 0:1.1.28-5.fc20 will be installed
+---> Package postgresql-libs.x86_64 0:9.3.4-1.fc20 will be installed
+---> Package python-meld3.x86_64 0:0.6.7-8.fc20 will be installed
+---> Package python-setuptools.noarch 0:1.4.2-1.fc20 will be installed
+--> Processing Dependency: python-backports-ssl_match_hostname for package: python-setuptools-1.4.2-1.fc20.noarch
+---> Package uuid.x86_64 0:1.6.2-21.fc20 will be installed
+--> Running transaction check
+---> Package python-backports-ssl_match_hostname.noarch 0:3.4.0.2-1.fc20 will be installed
+--> Processing Dependency: python-backports for package: python-backports-ssl_match_hostname-3.4.0.2-1.fc20.noarch
+--> Running transaction check
+---> Package python-backports.x86_64 0:1.0-3.fc20 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                              Arch    Version            Repository
+                                                                           Size
+================================================================================
+Installing:
+ postgresql                           x86_64  9.3.4-1.fc20       updates  3.1 M
+ postgresql-contrib                   x86_64  9.3.4-1.fc20       updates  587 k
+ postgresql-server                    x86_64  9.3.4-1.fc20       updates  3.8 M
+ supervisor                           noarch  3.0-1.fc20         fedora   560 k
+Installing for dependencies:
+ libxslt                              x86_64  1.1.28-5.fc20      fedora   241 k
+ postgresql-libs                      x86_64  9.3.4-1.fc20       updates  229 k
+ python-backports                     x86_64  1.0-3.fc20         fedora   5.4 k
+ python-backports-ssl_match_hostname  noarch  3.4.0.2-1.fc20     fedora    12 k
+ python-meld3                         x86_64  0.6.7-8.fc20       fedora    72 k
+ python-setuptools                    noarch  1.4.2-1.fc20       updates  413 k
+ uuid                                 x86_64  1.6.2-21.fc20      fedora    53 k
+
+Transaction Summary
+================================================================================
+Install  4 Packages (+7 Dependent packages)
+
+Total download size: 9.0 M
+Installed size: 40 M
+Downloading packages:
+--------------------------------------------------------------------------------
+Total                                              632 kB/s | 9.0 MB  00:14     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : postgresql-libs-9.3.4-1.fc20.x86_64                         1/11 
+  Installing : postgresql-9.3.4-1.fc20.x86_64                              2/11 
+  Installing : uuid-1.6.2-21.fc20.x86_64                                   3/11 
+  Installing : libxslt-1.1.28-5.fc20.x86_64                                4/11 
+  Installing : python-meld3-0.6.7-8.fc20.x86_64                            5/11 
+  Installing : python-backports-1.0-3.fc20.x86_64                          6/11 
+  Installing : python-backports-ssl_match_hostname-3.4.0.2-1.fc20.noarc    7/11 
+  Installing : python-setuptools-1.4.2-1.fc20.noarch                       8/11 
+  Installing : supervisor-3.0-1.fc20.noarch                                9/11 
+  Installing : postgresql-contrib-9.3.4-1.fc20.x86_64                     10/11 
+  Installing : postgresql-server-9.3.4-1.fc20.x86_64                      11/11 
+  Verifying  : python-setuptools-1.4.2-1.fc20.noarch                       1/11 
+  Verifying  : python-backports-ssl_match_hostname-3.4.0.2-1.fc20.noarc    2/11 
+  Verifying  : python-backports-1.0-3.fc20.x86_64                          3/11 
+  Verifying  : postgresql-contrib-9.3.4-1.fc20.x86_64                      4/11 
+  Verifying  : postgresql-libs-9.3.4-1.fc20.x86_64                         5/11 
+  Verifying  : python-meld3-0.6.7-8.fc20.x86_64                            6/11 
+  Verifying  : postgresql-9.3.4-1.fc20.x86_64                              7/11 
+  Verifying  : libxslt-1.1.28-5.fc20.x86_64                                8/11 
+  Verifying  : postgresql-server-9.3.4-1.fc20.x86_64                       9/11 
+  Verifying  : uuid-1.6.2-21.fc20.x86_64                                  10/11 
+  Verifying  : supervisor-3.0-1.fc20.noarch                               11/11 
+
+Installed:
+  postgresql.x86_64 0:9.3.4-1.fc20                                              
+  postgresql-contrib.x86_64 0:9.3.4-1.fc20                                      
+  postgresql-server.x86_64 0:9.3.4-1.fc20                                       
+  supervisor.noarch 0:3.0-1.fc20                                                
+
+Dependency Installed:
+  libxslt.x86_64 0:1.1.28-5.fc20                                                
+  postgresql-libs.x86_64 0:9.3.4-1.fc20                                         
+  python-backports.x86_64 0:1.0-3.fc20                                          
+  python-backports-ssl_match_hostname.noarch 0:3.4.0.2-1.fc20                   
+  python-meld3.x86_64 0:0.6.7-8.fc20                                            
+  python-setuptools.noarch 0:1.4.2-1.fc20                                       
+  uuid.x86_64 0:1.6.2-21.fc20                                                   
+
+Complete!
+Cleaning repos: fedora updates
+Cleaning up everything
+ ---> 0aa4d5c64924
+Removing intermediate container c6cbdf73ba81
+Step 4 : ADD ./postgresql-setup /usr/bin/postgresql-setup
+ ---> 6d14f44fead3
+Removing intermediate container e25354e6807c
+Step 5 : ADD ./postgres_user.sh /postgres_user.sh
+ ---> addf0ac0d8a6
+Removing intermediate container be853ffcce14
+Step 6 : ADD ./supervisord.conf /etc/supervisord.conf
+ ---> 192c0b923a76
+Removing intermediate container 38e9141b22df
+Step 7 : ADD ./start_postgres.sh /start_postgres.sh
+ ---> bf49797ff67c
+Removing intermediate container 8e591dd12d5c
+Step 8 : RUN chmod +x /usr/bin/postgresql-setup
+ ---> Running in f4a37d5d60d3
+ ---> 4feb123c9229
+Removing intermediate container f4a37d5d60d3
+Step 9 : RUN chmod +x /start_postgres.sh
+ ---> Running in f60d56175984
+ ---> a7edb15e4b5b
+Removing intermediate container f60d56175984
+Step 10 : RUN chmod +x /postgres_user.sh
+ ---> Running in 8f234c2220f0
+ ---> f137c45fc46e
+Removing intermediate container 8f234c2220f0
+Step 11 : RUN /usr/bin/postgresql-setup initdb
+ ---> Running in 69825aa4fddd
+Initializing database ... OK
+
+ ---> 834d10d6151f
+Removing intermediate container 69825aa4fddd
+Step 12 : ADD ./postgresql.conf /var/lib/pgsql/data/postgresql.conf
+ ---> 0df05a278a76
+Removing intermediate container a300a15bcc44
+Step 13 : RUN chown -v postgres.postgres /var/lib/pgsql/data/postgresql.conf
+ ---> Running in 469f789a28e1
+changed ownership of '/var/lib/pgsql/data/postgresql.conf' from root:root to postgres:postgres
+ ---> afa27260ad4c
+Removing intermediate container 469f789a28e1
+Step 14 : RUN echo "host    all             all             0.0.0.0/0               md5" >> /var/lib/pgsql/data/pg_hba.conf
+ ---> Running in 6931ddaac8c2
+ ---> dba1254ab36b
+Removing intermediate container 6931ddaac8c2
+Step 15 : RUN /postgres_user.sh
+ ---> Running in 93302410829b
+[91mLOG:  redirecting log output to logging collector process
+HINT:  Future log output will appear in directory "pg_log".
+[0mUSER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0  11592  1368 ?        Ss   09:22   0:00 /bin/bash /postgres_user.sh
+root        11  0.0  0.0  72836  1772 ?        S    09:22   0:00 su --login postgres --command /usr/bin/postgres -D /var/lib/pgsql/data -p 5432
+postgres    13  0.1  0.3 206656  7928 ?        Ss   09:22   0:00 /usr/bin/postgres -D /var/lib/pgsql/data -p 5432
+postgres    26  0.0  0.0 190288  1228 ?        Ss   09:22   0:00 postgres: logger process   
+postgres    28  0.0  0.0 206656  1624 ?        Ss   09:22   0:00 postgres: checkpointer process   
+postgres    29  0.0  0.0 206656  1640 ?        Ss   09:22   0:00 postgres: writer process   
+postgres    30  0.0  0.0 206656  1400 ?        Ss   09:22   0:00 postgres: wal writer process   
+postgres    31  0.0  0.1 207348  2696 ?        Ss   09:22   0:00 postgres: autovacuum launcher process   
+postgres    32  0.0  0.0 192380  1548 ?        Ss   09:22   0:00 postgres: stats collector process   
+root        33  0.0  0.0  19740  1212 ?        R    09:22   0:00 ps aux
+CREATE ROLE
+CREATE DATABASE
+                              List of roles
+ Role name  |                   Attributes                   | Member of 
+------------+------------------------------------------------+-----------
+ dockeruser | Superuser, Create role                         | {}
+ postgres   | Superuser, Create role, Create DB, Replication | {}
+
+ ---> f6ea44395699
+Removing intermediate container 93302410829b
+Step 16 : EXPOSE 5432
+ ---> Running in ccda668a0c46
+ ---> 665a3129e028
+Removing intermediate container ccda668a0c46
+Step 17 : CMD ["/bin/bash", "/start_postgres.sh"]
+ ---> Running in a3d5087c0efb
+ ---> 2f13efbb6abb
+Removing intermediate container a3d5087c0efb
+Successfully built 2f13efbb6abb
